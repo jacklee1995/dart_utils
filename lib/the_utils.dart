@@ -1,3 +1,3 @@
 library the_utils;
 
-export './str.dart';
+export 'src/str.dart';
