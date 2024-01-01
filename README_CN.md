@@ -64,9 +64,7 @@ print(isIPv4); // 输出： true
 | `isLicensePlate` | 检查字符串是否是有效的车牌号。 |
 | `kebabCase` | 将字符串转换为短横线命名格式。 |
 | `lowercaseWords` | 将字符串中的特定单词替换为小写形式。 |
-| `lowercaseFirstLetterOfEachWord` | 将字符串中
-
-的每个单词首字母转换为小写。 |
+| `lowercaseFirstLetterOfEachWord` | 将字符串中的每个单词首字母转换为小写。 |
 | `matchesPattern` | 检查字符串是否符合指定的正则表达式。 |
 | `nTimesRepeat` | 将字符串转换为n倍重复的形式。 |
 | `onlyDigits` | 获取字符串中的数字。 |

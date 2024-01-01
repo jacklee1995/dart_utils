@@ -77,9 +77,7 @@ You can find examples of each method in the code comments.
 | `replace` | Replaces substrings within the string. |
 | `replaceWords` | Replaces specific words in a string with a specified mapping. |
 | `replaceWithCallback` | Replaces specific patterns in a string with strings returned by a callback function. |
-| `removeSubstring` |
-
- Removes a specific substring from the string. |
+| `removeSubstring` | Removes a specific substring from the string. |
 | `removeNonNumeric` | Removes all non-numeric characters from the string. |
 | `removeHtmlTags` | Removes HTML tags from the string. |
 | `replaceChars` | Replaces each character in the string with a specified mapping character. |
