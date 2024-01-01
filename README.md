@@ -131,3 +131,53 @@ You can find examples of each method in the code comments.
 | `zipCompress` | Applies a simple compression algorithm to the string (using repeated character counts). |
 | `zipDecompress` | Decompresses a string compressed with a simple compression algorithm. |
 | `zipToMap` | Converts the string to a map of "key-value" pairs using a specified delimiter. |
+
+## Date Time Utils
+
+```dart
+import 'package:the_utils/the_utils.dart';
+
+void main(List<String> args) {
+  var dt = DT('2023-12-01 06:50');
+  dt.nextDay();
+  dt.printDateTime();
+}
+```
+outputs:
+
+```
+2023-12-02 06:50:00
+```
+
+
+You can find examples of each method in the code comments.
+
+| Method | Description |
+|--------|-------------|
+| `DT(String dateTime)` | Constructor that initializes with a specified date and time string. |
+| `DT.synchronization()` | Constructor that initializes with the current system date and time. |
+| `_parseDateTime(String dateTimeStr)` | Parses a date-time string into a `DateTime` object. |
+| `lastDay()` | Sets the date to the same time yesterday. |
+| `nextDay()` | Sets the date to the same time tomorrow. |
+| `previousNDays(int n)` | Sets the date to the same time `n` days ago. |
+| `nextNDays(int n)` | Sets the date to the same time `n` days in the future. |
+| `previousSecond()` | Moves the current time back by one second. |
+| `nextSecond()` | Advances the current time by one second. |
+| `previousMinute()` | Moves the current time back by one minute. |
+| `nextMinute()` | Advances the current time by one minute. |
+| `previousNMinutes(int n)` | Moves the current time back by `n` minutes. |
+| `nextNMinutes(int n)` | Advances the current time by `n` minutes. |
+| `previousNSeconds(int n)` | Moves the current time back by `n` seconds. |
+| `nextNSeconds(int n)` | Advances the current time by `n` seconds. |
+| `addTime(String timeStr)` | Adds time to the current time based on a given time string. |
+| `subtractTime(String timeStr)` | Subtracts time from the current time based on a given time string. |
+| `toString()` | Returns a date-time string in yyyy-MM-dd HH:mm:ss format. |
+| `printDateTime()` | Prints the date-time string. |
+| `toDateString()` | Gets the date string. |
+| `printDate()` | Prints the date string. |
+| `toTimeString()` | Gets the time string. |
+| `printTime()` | Prints the time string. |
+| `get stamp` | Gets the timestamp of the current time. |
+| `printStamp()` | Prints the timestamp of the current time. |
+| `run(List<String> timeStrings, Function callback)` | Runs a callback function based on specified time strings. |
+

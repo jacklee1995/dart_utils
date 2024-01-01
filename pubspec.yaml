@@ -1,6 +1,6 @@
 name: the_utils
 description: A dart utils library.
-version: 1.0.0
+version: 2.0.0
 repository: https://github.com/jacklee1995/dart_utils
 homepage: https://github.com/jacklee1995/dart_utils
 
@@ -8,6 +8,7 @@ environment:
   sdk: ^3.2.3
 
 dependencies:
+  intl: ^0.19.0
 
 
 dev_dependencies:

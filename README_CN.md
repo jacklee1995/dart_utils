@@ -130,3 +130,55 @@ print(isIPv4); // 输出： true
 | `zipDecompress` | 解压使用简单压缩算法压缩的字符串。 |
 | `zipToMap` | 使用指定的分隔符将字符串转换为“键-值”对的映射。 |
 
+
+## 日期时间工具
+
+例如：
+
+```dart
+import 'package:the_utils/the_utils.dart';
+
+void main(List<String> args) {
+  var dt = DT('2023-12-01 06:50');
+  dt.nextDay();
+  dt.printDateTime();
+}
+```
+
+输出为：
+
+```
+2023-12-02 06:50:00
+```
+
+你可以从代码注释上找到每一个方法的示例。
+
+| 方法 | 功能描述 |
+|------|-----------|
+| `DT(String dateTime)` | 构造函数，使用字符串格式的日期时间初始化。 |
+| `DT.synchronization()` | 构造函数，使用系统当前日期时间初始化。 |
+| `_parseDateTime(String dateTimeStr)` | 从日期时间字符串构造 `DateTime` 对象。 |
+| `lastDay()` | 设置到昨天的同一时间。 |
+| `nextDay()` | 设置到明天的同一时间。 |
+| `previousNDays(int n)` | 设置到前 `n` 天的同一时间。 |
+| `nextNDays(int n)` | 设置到后 `n` 天的同一时间。 |
+| `previousSecond()` | 将当前时间回退一秒。 |
+| `nextSecond()` | 将当前时间前进一秒。 |
+| `previousMinute()` | 将当前时间回退一分钟。 |
+| `nextMinute()` | 将当前时间前进一分钟。 |
+| `previousNMinutes(int n)` | 将当前时间回退指定分钟数。 |
+| `nextNMinutes(int n)` | 将当前时间前进指定分钟数。 |
+| `previousNSeconds(int n)` | 将当前时间回退指定秒数。 |
+| `nextNSeconds(int n)` | 将当前时间前进指定秒数。 |
+| `addTime(String timeStr)` | 根据给定的时间字符串增加时间。 |
+| `subtractTime(String timeStr)` | 根据给定的时间字符串减少时间。 |
+| `toString()` | 返回 yyyy-MM-dd HH:mm:ss 格式的日期时间字符串。 |
+| `printDateTime()` | 打印日期时间字符串。 |
+| `toDateString()` | 获取日期字符串。 |
+| `printDate()` | 打印日期字符串。 |
+| `toTimeString()` | 获取时间字符串。 |
+| `printTime()` | 打印时间字符串。 |
+| `get stamp` | 获取当前时间的时间戳。 |
+| `printStamp()` | 打印当前时间的时间戳。 |
+| `run(List<String> timeStrings, Function callback)` | 根据指定的时间字符串运行回调函数。 |
+
