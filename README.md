@@ -2,10 +2,21 @@
 
 A Dart and Flutter utils library.
 
-[中文文档]()
+[中文文档](https://github.com/jacklee1995/dart_utils/blob/master/README_CN.md)
 
 
 ## String Utils
+
+
+
+```dart
+import 'package:the_utils/the_utils.dart';
+
+var isIPv4 = StrUtil.isIPv4("192.168.1.1");
+print(isIPv4); // outputs: true
+```
+
+You can find examples of each method in the code comments.
 
 | Method | Description |
 |--------|-------------|

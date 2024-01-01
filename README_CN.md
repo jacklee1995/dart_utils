@@ -2,10 +2,19 @@
 
 一个 Dart 和 Flutter 工具库。
 
-[English Document]()
+[English Document](https://github.com/jacklee1995/dart_utils/blob/master/README.md)
 
 ## 字符串工具
 
+
+```dart
+import 'package:the_utils/the_utils.dart';
+
+var isIPv4 = StrUtil.isIPv4("192.168.1.1");
+print(isIPv4); // 输出： true
+```
+
+你可以从代码注释上找到每一个方法的示例。
 
 | 方法 | 功能描述 |
 |------|-----------|
