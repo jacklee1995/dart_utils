@@ -218,8 +218,62 @@ class StrUtil {
         }
       }
     }
-
     return result;
+  }
+
+  /// 检查字符串是否是有效的YAML格式。
+  ///
+  /// - str: 要检查的字符串。
+  /// - 返回值: 如果字符串是有效的YAML格式，则返回true，否则返回false。
+  /// - 示例：
+  /// ```dart
+  /// var isValidYaml = StrUtil.isYaml("key: value");
+  /// print(isValidYaml); // 输出: true
+  /// ```
+  static bool isYaml(String str) {
+    // YAML格式检查通常需要解析库，这里仅提供一个简单的实现示例
+    return str.trim().contains(':');
+  }
+
+  /// 检查字符串是否是有效的XML格式。
+  ///
+  /// - str: 要检查的字符串。
+  /// - 返回值: 如果字符串是有效的XML格式，则返回true，否则返回false。
+  /// - 示例：
+  /// ```dart
+  /// var isValidXml = StrUtil.isXml("<tag></tag>");
+  /// print(isValidXml); // 输出: true
+  /// ```
+  static bool isXml(String str) {
+    return RegExp(r'^<\?xml.*\?>|<(\w+)(\s+.*?>|>).*<\/\1>$', dotAll: true)
+        .hasMatch(str.trim());
+  }
+
+  /// 检查字符串是否是有效的HTML格式。
+  ///
+  /// - str: 要检查的字符串。
+  /// - 返回值: 如果字符串是有效的HTML格式，则返回true，否则返回false。
+  /// - 示例：
+  /// ```dart
+  /// var isValidHtml = StrUtil.isHtml("<html></html>");
+  /// print(isValidHtml); // 输出: true
+  /// ```
+  static bool isHtml(String str) {
+    return RegExp(r'<!DOCTYPE html>|<html.*>.*<\/html>', dotAll: true)
+        .hasMatch(str.trim());
+  }
+
+  /// 检查字符串是否是有效的SVG格式。
+  ///
+  /// - str: 要检查的字符串。
+  /// - 返回值: 如果字符串是有效的SVG格式，则返回true，否则返回false。
+  /// - 示例：
+  /// ```dart
+  /// var isValidSvg = StrUtil.isSvg("<svg></svg>");
+  /// print(isValidSvg); // 输出: true
+  /// ```
+  static bool isSvg(String str) {
+    return str.trim().startsWith('<svg') && str.trim().endsWith('</svg>');
   }
 
   /// 将字符串转换为逗号分隔的数字格式。
